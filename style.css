@@ -1,0 +1,75 @@
+* {
+  font-family: "Roboto", Arial;
+}
+
+.calculator {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(4, 50px);
+  grid-template-areas:
+    "7 8 9 . ."
+    "4 5 6 . ."
+    "1 2 3 C ."
+    "0 dec . .";
+}
+
+#1 {
+  grid-area: 1;
+}
+
+#2 {
+  grid-area: 2;
+}
+
+#3 {
+  grid-area: 3;
+}
+
+#4 {
+  grid-area: 4;
+}
+
+#5 {
+  grid-area: 5;
+}
+
+#6 {
+  grid-area: 6;
+}
+
+#7 {
+  grid-area: 7;
+}
+
+#8 {
+  grid-area: 8;
+}
+
+#9 {
+  grid-area: 9;
+}
+
+#0 {
+  grid-area: 0;
+}
+
+#decimal {
+  grid-area: dec;
+}
+
+#clear {
+  grid-area: C;
+}
+
+.numbers {
+  border: 1px dashed yellow;
+}
+
+.operator,
+.clear,
+.equals,
+.decimal {
+  border: 1px dashed red;
+}
