@@ -4,55 +4,55 @@
 
 .calculator {
   display: grid;
-  align-items: center;
-  justify-items: center;
+  justify-content: center;
+  grid-gap: 4px;
   grid-template-columns: repeat(5, 50px);
   grid-template-rows: repeat(4, 50px);
   grid-template-areas:
-    "7 8 9 . ."
-    "4 5 6 . ."
-    "1 2 3 C ."
-    "0 dec . .";
+    "MR seven eight nine div "
+    "MS four five six mult "
+    "MC one two three minus "
+    "C zero dec equals plus";
 }
 
-#1 {
-  grid-area: 1;
+#one {
+  grid-area: one;
 }
 
-#2 {
-  grid-area: 2;
+#two {
+  grid-area: two;
 }
 
-#3 {
-  grid-area: 3;
+#three {
+  grid-area: three;
 }
 
-#4 {
-  grid-area: 4;
+#four {
+  grid-area: four;
 }
 
-#5 {
-  grid-area: 5;
+#five {
+  grid-area: five;
 }
 
-#6 {
-  grid-area: 6;
+#six {
+  grid-area: six;
 }
 
-#7 {
-  grid-area: 7;
+#seven {
+  grid-area: seven;
 }
 
-#8 {
-  grid-area: 8;
+#eight {
+  grid-area: eight;
 }
 
-#9 {
-  grid-area: 9;
+#nine {
+  grid-area: nine;
 }
 
-#0 {
-  grid-area: 0;
+#zero {
+  grid-area: zero;
 }
 
 #decimal {
@@ -63,8 +63,80 @@
   grid-area: C;
 }
 
+#div {
+  grid-area: div;
+}
+
+#mult {
+  grid-area: mult;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#mem-clear {
+  grid-area: MC;
+}
+
+#mem-save {
+  grid-area: MS;
+}
+
+#mem-recall {
+  grid-area: MR;
+}
+
 .numbers {
-  border: 1px dashed yellow;
+  text-align: center;
+  background-color: #b0ddb2;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: #3a493a;
+}
+
+.numbers:hover {
+  cursor: pointer;
+  background-color: #485b49;
+  border: 1px solid yellow;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.operator {
+  /* */
+}
+
+/*
+link for colors
+http://www.htmlcsscolor.com/hex/B0DDB2
+*/
+
+.operator:hover {
+  cursor: pointer;
+}
+
+.memory {
+  text-align: center;
+  background-color: #5a725b;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.memory:hover {
+  cursor: pointer;
+  background-color: #8db18e;
+  border: 1px solid yellow;
+  color: #3a493a;
 }
 
 .operator,
