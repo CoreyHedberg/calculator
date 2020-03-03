@@ -9,7 +9,6 @@
   margin: 2em 42% 0 42%;
   background-color: #b6bdc6;
   display: grid;
-  justify-content: center;
   grid-gap: 4px;
   grid-template-columns: repeat(5, 50px);
   grid-template-rows: repeat(5, 50px);
@@ -22,6 +21,8 @@
 }
 
 #display {
+  font-family: "Oxanium";
+  text-align: right;
   background-color: #ffffff;
   border: 2px solid #1e2a41;
   border-radius: 4px;
@@ -110,6 +111,7 @@
 
 .numbers {
   text-align: center;
+  padding-top: 15px;
   background-color: #b0ddb2;
   border: 1px solid #000000;
   border-radius: 4px;
@@ -125,7 +127,8 @@
 }
 
 .operator {
-  /* */
+  text-align: center;
+  padding-top: 15px;
 }
 
 /*
@@ -139,6 +142,7 @@ http://www.htmlcsscolor.com/hex/B0DDB2
 
 .memory {
   text-align: center;
+  padding-top: 15px;
   background-color: #5a725b;
   border: 1px solid #000000;
   border-radius: 4px;
