@@ -2,14 +2,21 @@
   font-family: "Roboto", Arial;
 }
 
+html {
+  background: linear-gradient(to bottom right, #008080, #acd5d5);
+  height: 100%;
+}
+
 .calculator {
   border: 2px solid #00205b;
   border-radius: 4px;
   padding: 0.8em 0.5em 0.8em 0.5em;
-  margin: 2em 42% 0 42%;
+  margin: auto;
+  margin-top: 1.5em;
+  width: 16.88em;
   background-color: #b6bdc6;
   display: grid;
-  grid-gap: 4px;
+  grid-gap: 5px;
   grid-template-columns: repeat(5, 50px);
   grid-template-rows: repeat(5, 50px);
   grid-template-areas:
@@ -22,10 +29,13 @@
 
 #display {
   font-family: "Oxanium";
+  font-size: 2.5em;
   text-align: right;
+  color: #000000;
   background-color: #ffffff;
-  border: 2px solid #1e2a41;
+  border: 2px solid #000000;
   border-radius: 4px;
+  padding-right: 0.15em;
   grid-area: dis;
 }
 
@@ -109,56 +119,87 @@
   grid-area: MR;
 }
 
-.numbers {
+.inputs {
   text-align: center;
   padding-top: 15px;
-  background-color: #b0ddb2;
+  background-color: #00205b;
+  color: #ffffff;
   border: 1px solid #000000;
   border-radius: 4px;
-  color: #3a493a;
 }
 
-.numbers:hover {
+.inputs:hover {
   cursor: pointer;
-  background-color: #485b49;
+  background-color: #acb6c9;
+  color: #000000;
+  font-weight: bold;
   border: 1px solid yellow;
-  border-radius: 4px;
-  color: #ffffff;
 }
 
 .operator {
   text-align: center;
   padding-top: 15px;
+  background-color: #3a517e;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
 }
-
-/*
-link for colors
-http://www.htmlcsscolor.com/hex/B0DDB2
-*/
 
 .operator:hover {
   cursor: pointer;
+  background-color: #bec6d5;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid yellow;
 }
 
 .memory {
   text-align: center;
   padding-top: 15px;
-  background-color: #5a725b;
+  background-color: #7d8dab;
+  color: #ffffff;
   border: 1px solid #000000;
   border-radius: 4px;
-  color: #ffffff;
 }
 
 .memory:hover {
   cursor: pointer;
-  background-color: #8db18e;
+  background-color: #d5dae4;
+  color: #000000;
+  font-weight: bold;
   border: 1px solid yellow;
-  color: #3a493a;
 }
 
-.operator,
-.clear,
-.equals,
-.decimal {
-  border: 1px dashed red;
+.equals {
+  text-align: center;
+  padding-top: 15px;
+  background-color: #ff5c5c;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.equals:hover {
+  cursor: pointer;
+  background-color: #ffcaca;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid yellow;
+}
+
+.clear {
+  text-align: center;
+  padding-top: 15px;
+  background-color: #708090;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.clear:hover {
+  cursor: pointer;
+  background-color: #d1d5a;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid yellow;
 }
