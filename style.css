@@ -13,7 +13,7 @@ html {
   padding: 0.8em 0.5em 0.8em 0.5em;
   margin: auto;
   margin-top: 1.5em;
-  width: 16.88em;
+  width: 16.87em;
   background-color: #b6bdc6;
   display: grid;
   grid-gap: 5px;
@@ -119,7 +119,8 @@ html {
   grid-area: MR;
 }
 
-.inputs {
+.inputs,
+.decimal {
   text-align: center;
   padding-top: 15px;
   background-color: #00205b;
@@ -128,7 +129,8 @@ html {
   border-radius: 4px;
 }
 
-.inputs:hover {
+.inputs:hover,
+.decimal:hover {
   cursor: pointer;
   background-color: #acb6c9;
   color: #000000;
@@ -198,7 +200,7 @@ html {
 
 .clear:hover {
   cursor: pointer;
-  background-color: #d1d5a;
+  background-color: #d1d5da;
   color: #000000;
   font-weight: bold;
   border: 1px solid yellow;
