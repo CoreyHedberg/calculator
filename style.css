@@ -13,7 +13,7 @@ html {
   padding: 0.8em 0.5em 0.8em 0.5em;
   margin: auto;
   margin-top: 1.5em;
-  width: 16.87em;
+  width: 16.89em;
   background-color: #b6bdc6;
   display: grid;
   grid-gap: 5px;
@@ -119,18 +119,16 @@ html {
   grid-area: MR;
 }
 
-.inputs,
-.decimal {
+.inputs {
+  font-size: 1.2em;
   text-align: center;
-  padding-top: 15px;
   background-color: #00205b;
   color: #ffffff;
   border: 1px solid #000000;
   border-radius: 4px;
 }
 
-.inputs:hover,
-.decimal:hover {
+.inputs:hover {
   cursor: pointer;
   background-color: #acb6c9;
   color: #000000;
@@ -139,8 +137,8 @@ html {
 }
 
 .operator {
+  font-size: 1.2em;
   text-align: center;
-  padding-top: 15px;
   background-color: #3a517e;
   color: #ffffff;
   border: 1px solid #000000;
@@ -156,8 +154,8 @@ html {
 }
 
 .memory {
+  font-size: 1em;
   text-align: center;
-  padding-top: 15px;
   background-color: #7d8dab;
   color: #ffffff;
   border: 1px solid #000000;
@@ -173,8 +171,8 @@ html {
 }
 
 .equals {
+  font-size: 1.2em;
   text-align: center;
-  padding-top: 15px;
   background-color: #ff5c5c;
   color: #ffffff;
   border: 1px solid #000000;
@@ -190,8 +188,8 @@ html {
 }
 
 .clear {
+  font-size: 1.2em;
   text-align: center;
-  padding-top: 15px;
   background-color: #708090;
   color: #ffffff;
   border: 1px solid #000000;
