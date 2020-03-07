@@ -21,6 +21,7 @@ function showInputOnDisplay(number) {
     document.getElementById("display").innerText = "";
   }
   document.getElementById("display").innerText += number;
+  return;
 }
 
 function clearDisplay() {
