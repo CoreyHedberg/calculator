@@ -11,24 +11,16 @@ let currentDisplay = document.getElementById("display").innerText;
 const buttons = document.querySelectorAll(".inputs");
 for (const button of buttons) {
   button.addEventListener("click", function() {
-    // if the button value is a decimal, then
-    if (button.value === "." && currentDisplay.indexOf(".") !== -1) {
-      // check the display
-      // see if it contains a decimal point
-      // if it does contain a decimal point
-      // then do nothing
-      // return;
-    } /* otherwise */ else if (
-      button.value === "." &&
-      currentDisplay.indexOf(".") !== -1
-    ) {
-      // add a decimal point to screen
-      // else
-      showInputOnDisplay(button.value);
+    if (button.value === ".") {
+      currentDisplay.indexOf(".") !== -1;
+      console.log(`this if is winning!`);
+      return;
     }
+    showInputOnDisplay(button.value);
     // Used for debugging
     console.log(`button.addEventListener : fired!`);
     console.log(button.value);
+    console.log(currentDisplay.indexOf("."));
   });
 }
 
@@ -47,3 +39,11 @@ function clearDisplay() {
   console.log(`clearDisplay : Display cleared!`);
   return;
 }
+
+// if the button value is a decimal, then
+// check the display
+// see if it contains a decimal point
+// then do nothing
+// otherwise
+// add a decimal point to screen
+// else
