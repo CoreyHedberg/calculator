@@ -43,6 +43,7 @@ function clearDisplay() {
 // if the button value is a decimal, then
 // check the display
 // see if it contains a decimal point
+// if it does contain a decimal point
 // then do nothing
 // otherwise
 // add a decimal point to screen
