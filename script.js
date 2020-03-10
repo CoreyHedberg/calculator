@@ -12,9 +12,24 @@ const buttons = document.querySelectorAll(".inputs");
 for (const button of buttons) {
   button.addEventListener("click", function() {
     if (button.value === ".") {
-      currentDisplay.indexOf(".") !== -1;
-      console.log(`this if is winning!`);
-      return;
+      if (currentDisplay.indexOf(".") !== -1) {
+        console.log(
+          "!== -1 : " +
+            currentDisplay.indexOf(".") +
+            " " +
+            typeof currentDisplay.indexOf(".")
+        );
+        return;
+      } else if (currentDisplay.indexOf(".") === -1) {
+        console.log(
+          "=== -1 : " +
+            currentDisplay.indexOf(".") +
+            " " +
+            typeof currentDisplay.indexOf(".")
+        );
+        showInputOnDisplay(button.value);
+        return;
+      }
     }
     showInputOnDisplay(button.value);
     // Used for debugging

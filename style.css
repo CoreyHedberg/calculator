@@ -130,7 +130,7 @@ html {
 
 .inputs:hover {
   cursor: pointer;
-  background-color: #acb6c9;
+  background: linear-gradient(to bottom right, #97a4bc, #ffffff);
   color: #000000;
   font-weight: bold;
   border: 1px solid yellow;
