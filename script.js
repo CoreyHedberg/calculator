@@ -8,13 +8,20 @@ let currentDisplay = document.getElementById("display").innerText;
 
 const buttons = document.querySelectorAll(".inputs");
 for (const button of buttons) {
-  button.addEventListener("click", function() {
+  button.addEventListener("click", () => {
     if (button.value === ".") {
       if (currentDisplay.indexOf(".") !== -1) {
         return;
       }
     }
     showInputOnDisplay(button.value);
+  });
+}
+
+const operators = document.querySelectorAll(".operator");
+for (const operator of operators) {
+  operator.addEventListener("click", () => {
+    console.log(operator.value);
   });
 }
 
