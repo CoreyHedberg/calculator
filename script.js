@@ -1,11 +1,15 @@
-window.onload = function() {
+window.onload = () => {
   document.getElementById("display").innerText = "0";
 };
 
 document.getElementById("clear").addEventListener("click", clearDisplay);
 
+// Global variables
 let currentDisplay = document.getElementById("display").innerText;
+let firstNumber;
+let secondNumber;
 
+// Event listener for numbers and decimal point
 const buttons = document.querySelectorAll(".inputs");
 for (const button of buttons) {
   button.addEventListener("click", () => {
@@ -18,10 +22,12 @@ for (const button of buttons) {
   });
 }
 
+// Event listener for the operator
 const operators = document.querySelectorAll(".operator");
 for (const operator of operators) {
   operator.addEventListener("click", () => {
-    console.log(operator.value);
+    console.log(`operator.value : ${operator.value}`);
+    operatorChosen(operator.value);
   });
 }
 
@@ -30,8 +36,14 @@ function showInputOnDisplay(number) {
     currentDisplay = "";
   }
   currentDisplay += number;
-  document.getElementById("display").innerText = currentDisplay;
-  return;
+  return (document.getElementById("display").innerText = currentDisplay);
+}
+
+function operatorChosen(operator) {
+  firstNumber = document.getElementById("display").innerText;
+  console.log(`firstNumber : ${firstNumber}`);
+  console.log(`operator : ${operator}`);
+  console.log(`operator type : ${typeof operator}`);
 }
 
 function clearDisplay() {
