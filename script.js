@@ -3,11 +3,13 @@ window.onload = () => {
 };
 
 document.getElementById("clear").addEventListener("click", clearDisplay);
+document.getElementById("equals").addEventListener("click", performCalculation);
 
 // Global variables
 let currentDisplay = document.getElementById("display").innerText;
 let firstNumber;
 let secondNumber;
+let storedOperator = "";
 
 // Event listener for numbers and decimal point
 const buttons = document.querySelectorAll(".inputs");
@@ -41,9 +43,43 @@ function showInputOnDisplay(number) {
 
 function operatorChosen(operator) {
   firstNumber = document.getElementById("display").innerText;
+  storedOperator = operator;
+  clearDisplay();
+  // Used for debugging
   console.log(`firstNumber : ${firstNumber}`);
   console.log(`operator : ${operator}`);
   console.log(`operator type : ${typeof operator}`);
+  console.log(`storedOperator : ${storedOperator}`);
+  console.log(`storedOperator : ${typeof storedOperator}`);
+}
+
+function performCalculation() {
+  console.log(`** performCalculation : fired **`);
+  // take the first number and the operator and calculate it with the second number chosen.
+  let calc = 0;
+  secondNumber = document.getElementById("display").innerText;
+  console.log(`performCalculation firstNumber : ${firstNumber}`);
+  console.log(`performCalculation secondNumber : ${secondNumber}`);
+  console.log(`performCalculation : ${storedOperator}`);
+
+  switch (storedOperator) {
+    case "/":
+      calc = parseInt(firstNumber) / parseInt(secondNumber);
+      break;
+    case "*":
+      calc = parseInt(firstNumber) * parseInt(secondNumber);
+      break;
+    case "-":
+      calc = parseInt(firstNumber) - parseInt(secondNumber);
+      break;
+    case "+":
+      calc = parseInt(firstNumber) + parseInt(secondNumber);
+      break;
+  }
+  document.getElementById("display").innerText = calc.toLocaleString();
+  console.log(`calc : ${calc}`);
+  console.log(`calc typeof : ${typeof calc}`);
+  return;
 }
 
 function clearDisplay() {
