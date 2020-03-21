@@ -12,7 +12,7 @@ Click [here](https://coreyhedberg.github.io/calculator/) to crunch some numbers.
 
 <image src="media/readme_screenshot.png">
 
-This project really pushed forward my understanding of JavaScript. I was able to incorporate some newer features of JavaSctipt, like writing my first couple arrow functions.
+This project really pushed forward my understanding of JavaScript. I was able to incorporate some newer features of the language, like writing my first couple arrow functions.
 
 ## Author
 
