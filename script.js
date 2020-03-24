@@ -5,6 +5,11 @@ window.onload = () => {
 document.getElementById("clear").addEventListener("click", clearDisplay);
 document.getElementById("equals").addEventListener("click", performCalculation);
 
+document.getElementById("mem-save").addEventListener("click", () => {
+  let numberStored = document.getElementById("display").innerText;
+  localStorage.setItem(numberStored);
+});
+
 // Global variables
 let currentDisplay = document.getElementById("display").innerText;
 let firstNumber;
