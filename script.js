@@ -19,7 +19,6 @@ document.getElementById("mem-clear").addEventListener("click", () => {
   localStorage.clear();
 });
 
-// Global variables
 let currentDisplay = document.getElementById("display").innerText;
 let firstNumber;
 let secondNumber;
