@@ -5,6 +5,20 @@ window.onload = () => {
 document.getElementById("clear").addEventListener("click", clearDisplay);
 document.getElementById("equals").addEventListener("click", performCalculation);
 
+document.getElementById("mem-recall").addEventListener("click", () => {
+  numberRetreived = localStorage.getItem("stored number");
+  document.getElementById("display").innerText = numberRetreived;
+});
+
+document.getElementById("mem-save").addEventListener("click", () => {
+  let numberStored = document.getElementById("display").innerText;
+  localStorage.setItem("stored number", numberStored);
+});
+
+document.getElementById("mem-clear").addEventListener("click", () => {
+  localStorage.clear();
+});
+
 // Global variables
 let currentDisplay = document.getElementById("display").innerText;
 let firstNumber;
@@ -26,7 +40,6 @@ for (const button of buttons) {
 const operators = document.querySelectorAll(".operator");
 for (const operator of operators) {
   operator.addEventListener("click", () => {
-    console.log(`operator.value : ${operator.value}`);
     operatorChosen(operator.value);
   });
 }
@@ -43,22 +56,11 @@ function operatorChosen(operator) {
   firstNumber = document.getElementById("display").innerText;
   storedOperator = operator;
   clearDisplay();
-  // Used for debugging
-  console.log(`firstNumber : ${firstNumber}`);
-  console.log(`operator : ${operator}`);
-  console.log(`operator type : ${typeof operator}`);
-  console.log(`storedOperator : ${storedOperator}`);
-  console.log(`storedOperator : ${typeof storedOperator}`);
 }
 
 function performCalculation() {
-  console.log(`** performCalculation : fired **`);
   let calc = 0;
   secondNumber = document.getElementById("display").innerText;
-  // Used for debugging
-  console.log(`performCalculation firstNumber : ${firstNumber}`);
-  console.log(`performCalculation secondNumber : ${secondNumber}`);
-  console.log(`performCalculation : ${storedOperator}`);
 
   switch (storedOperator) {
     case "/":
@@ -75,9 +77,6 @@ function performCalculation() {
       break;
   }
   document.getElementById("display").innerText = calc.toLocaleString();
-  // Used for debugging
-  console.log(`calc : ${calc}`);
-  console.log(`calc typeof : ${typeof calc}`);
   return;
 }
 
