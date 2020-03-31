@@ -16,7 +16,7 @@ This project really pushed forward my understanding of JavaScript. I was able to
 
 I also wrote code to utilize the localStorage API for the browser by setting up memory save, recall, and clear buttons on my calculator.
 
-Another first for me on this project was tying the keyboard events of the numbers, the four operators, and the Esc key to function as the way to clear the display.
+Another first for me on this project was tying the keyboard events of the numbers, the four operators, the Esc key to function as the way to clear the display, and the Enter key to perform the calculation.
 
 ## Author
 
