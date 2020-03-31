@@ -104,11 +104,6 @@ function showInputOnDisplay(number) {
   if (currentDisplay === "0") {
     currentDisplay = "";
   }
-  if (number.value === ".") {
-    if (currentDisplay.indexOf !== -1) {
-      return;
-    }
-  }
   currentDisplay += number;
   return (document.getElementById("display").innerText = currentDisplay);
 }
