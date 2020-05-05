@@ -6,11 +6,11 @@ Click [here](https://coreyhedberg.github.io/calculator/) to crunch some numbers.
 
 ## Languages Used
 
-<image src="media/html.svg" width="55">&nbsp; &nbsp; <image src="media/css.svg" width="55">&nbsp; &nbsp; <image src="media/js.svg" width="55">
+<image src="readme_files/html.svg" width="55">&nbsp; &nbsp; <image src="readme_files/css.svg" width="55">&nbsp; &nbsp; <image src="readme_files/js.svg" width="55">
 
 ## Summary
 
-<image src="media/readme_screenshot.png">
+<image src="readme_files/readme_gif.gif">
 
 This project really pushed forward my understanding of JavaScript. I was able to incorporate some newer features of the language, like writing my first couple of arrow functions.
 
