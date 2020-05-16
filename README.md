@@ -20,4 +20,5 @@ Another first for me on this project was tying the keyboard events of the number
 
 ## Author
 
-**Corey Hedberg** &bull; _Software Developer_ &bull; [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
+**Corey Hedberg** | _Software Developer_<br>
+[Website](https://coreyhedberg.dev/) &bull; [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)

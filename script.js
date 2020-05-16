@@ -2,7 +2,7 @@ window.onload = () => {
   document.getElementById("display").innerText = "0";
 };
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   switch (event.which) {
     case 96:
       showInputOnDisplay(0);
