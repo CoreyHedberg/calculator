@@ -10,7 +10,7 @@ Click [here](https://coreyhedberg.github.io/calculator/) to crunch some numbers.
 
 ## Summary
 
-<image src="readme_files/readme_gif.gif">
+<image src="readme_files/readme_screenshot.gif">
 
 This project really pushed forward my understanding of JavaScript. I was able to incorporate some newer features of the language, like writing my first couple of arrow functions.
 
