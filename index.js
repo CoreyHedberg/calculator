@@ -2,8 +2,19 @@ window.onload = () => {
   document.getElementById("display").innerText = "0"
 }
 
+let currentDisplay = DISPLAY.innerText
+let firstNumber
+let secondNumber
+let storedOperator = ""
+const DISPLAY = document.getElementById("display")
+const CLEAR = document.getElementById("clear")
+const EQUALS = document.getElementById("equals")
+const MEM_RECALL = document.getElementById("mem-recall")
+const MEM_SAVE = document.getElementById("mem-save")
+const MEM_CLEAR = document.getElementById("mem-clear")
+
 document.addEventListener("keydown", (event) => {
-  switch (event.key) {
+  switch (event.which) {
     case 96:
       showInputOnDisplay(0)
       break
@@ -58,28 +69,23 @@ document.addEventListener("keydown", (event) => {
   }
 })
 
-document.getElementById("clear").addEventListener("click", clearDisplay)
-document.getElementById("equals").addEventListener("click", performCalculation)
+CLEAR.addEventListener("click", clearDisplay)
+EQUALS.addEventListener("click", performCalculation)
 
-document.getElementById("mem-recall").addEventListener("click", () => {
+MEM_RECALL.addEventListener("click", () => {
   numberRetreived = localStorage.getItem("stored number")
-  document.getElementById("display").innerText = numberRetreived
+  DISPLAY.innerText = numberRetreived
 })
 
-document.getElementById("mem-save").addEventListener("click", () => {
-  let numberStored = document.getElementById("display").innerText
+MEM_SAVE.addEventListener("click", () => {
+  let numberStored = DISPLAY.innerText
   localStorage.setItem("stored number", numberStored)
   clearDisplay()
 })
 
-document.getElementById("mem-clear").addEventListener("click", () => {
+MEM_CLEAR.addEventListener("click", () => {
   localStorage.clear()
 })
-
-let currentDisplay = document.getElementById("display").innerText
-let firstNumber
-let secondNumber
-let storedOperator = ""
 
 const buttons = document.querySelectorAll(".inputs")
 for (const button of buttons) {
@@ -105,18 +111,18 @@ function showInputOnDisplay(number) {
     currentDisplay = ""
   }
   currentDisplay += number
-  return (document.getElementById("display").innerText = currentDisplay)
+  return (DISPLAY.innerText = currentDisplay)
 }
 
 function operatorChosen(operator) {
-  firstNumber = document.getElementById("display").innerText
+  firstNumber = DISPLAY.innerText
   storedOperator = operator
   clearDisplay()
 }
 
 function performCalculation() {
   let calculation = 0
-  secondNumber = document.getElementById("display").innerText
+  secondNumber = DISPLAY.innerText
 
   switch (storedOperator) {
     case "/":
@@ -132,12 +138,12 @@ function performCalculation() {
       calculation = parseFloat(firstNumber) + parseFloat(secondNumber)
       break
   }
-  document.getElementById("display").innerText = calculation.toLocaleString()
+  DISPLAY.innerText = calculation.toLocaleString()
   return
 }
 
 function clearDisplay() {
   currentDisplay = "0"
-  document.getElementById("display").innerText = currentDisplay
+  DISPLAY.innerText = currentDisplay
   return
 }
