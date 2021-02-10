@@ -1,69 +1,69 @@
-window.onload = () => {
-  document.getElementById("display").innerText = "0"
-}
-
-let currentDisplay = DISPLAY.innerText
-let firstNumber
-let secondNumber
-let storedOperator = ""
 const DISPLAY = document.getElementById("display")
 const CLEAR = document.getElementById("clear")
 const EQUALS = document.getElementById("equals")
 const MEM_RECALL = document.getElementById("mem-recall")
 const MEM_SAVE = document.getElementById("mem-save")
 const MEM_CLEAR = document.getElementById("mem-clear")
+let currentDisplay = DISPLAY.innerText
+let firstNumber
+let secondNumber
+let storedOperator = ""
+
+window.onload = () => {
+  DISPLAY.innerText = "0"
+}
 
 document.addEventListener("keydown", (event) => {
-  switch (event.which) {
-    case 96:
+  switch (event.key) {
+    case "0":
       showInputOnDisplay(0)
       break
-    case 97:
+    case "1":
       showInputOnDisplay(1)
       break
-    case 98:
+    case "2":
       showInputOnDisplay(2)
       break
-    case 99:
+    case "3":
       showInputOnDisplay(3)
       break
-    case 100:
+    case "4":
       showInputOnDisplay(4)
       break
-    case 101:
+    case "5":
       showInputOnDisplay(5)
       break
-    case 102:
+    case "6":
       showInputOnDisplay(6)
       break
-    case 103:
+    case "7":
       showInputOnDisplay(7)
       break
-    case 104:
+    case "8":
       showInputOnDisplay(8)
       break
-    case 105:
+    case "9":
       showInputOnDisplay(9)
       break
-    case 110:
+    case ".":
       showInputOnDisplay(".")
       break
-    case 27:
+    case "Escape":
       clearDisplay()
       break
-    case 111:
+    case "/":
       operatorChosen("/")
       break
-    case 106:
+    case "*":
       operatorChosen("*")
       break
-    case 109:
+    case "-":
       operatorChosen("-")
       break
-    case 107:
+    case "+":
       operatorChosen("+")
       break
-    case 13:
+    case "Enter":
       performCalculation()
       break
   }
