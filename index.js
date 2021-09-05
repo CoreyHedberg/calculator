@@ -87,22 +87,22 @@ MEM_CLEAR.addEventListener("click", () => {
   localStorage.clear()
 })
 
-const buttons = document.querySelectorAll(".inputs")
-for (const button of buttons) {
-  button.addEventListener("click", () => {
-    if (button.value === ".") {
+const BUTTONS = document.querySelectorAll(".inputs")
+for (const BUTTON of BUTTONS) {
+  BUTTON.addEventListener("click", () => {
+    if (BUTTON.value === ".") {
       if (currentDisplay.indexOf(".") !== -1) {
         return
       }
     }
-    showInputOnDisplay(button.value)
+    showInputOnDisplay(BUTTON.value)
   })
 }
 
-const operators = document.querySelectorAll(".operator")
-for (const operator of operators) {
-  operator.addEventListener("click", () => {
-    operatorChosen(operator.value)
+const OPERATORS = document.querySelectorAll(".operator")
+for (const OPERATOR of OPERATORS) {
+  OPERATOR.addEventListener("click", () => {
+    operatorChosen(OPERATOR.value)
   })
 }
 
